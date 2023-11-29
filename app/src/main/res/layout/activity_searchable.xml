@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.teamfan.plantpedia.ui.SearchableActivity"
+    tools:context="com.teamfan.plantpedia.SearchableActivity"
     android:background="@color/white">
 
     <TextView
@@ -12,17 +12,18 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@color/cream"
-        app:layout_constraintTop_toTopOf="0dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="1dp" />
 
     <ImageView
         android:id="@+id/iv_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="13dp"
         android:src="@drawable/logo_pp"
-        app:layout_constraintEnd_toStartOf="@+id/search_view"
-        tools:layout_editor_absoluteY="31dp"
-        app:layout_constraintTop_toTopOf="0dp"/>
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <com.google.android.material.search.SearchBar
         android:id="@+id/search_view"
@@ -39,9 +40,11 @@
         android:id="@+id/rv_search_result"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:backgroundTint="@color/white"
         android:layout_marginTop="20dp"
+        android:backgroundTint="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/search_view"/>
+        app:layout_constraintTop_toBottomOf="@id/search_view"
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="25dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
