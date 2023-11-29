@@ -6,4 +6,13 @@
     </style>
 
     <style name="Theme.PlantPedia" parent="Base.Theme.PlantPedia" />
+    <style name="ThemeOverlay.SearchView" parent="">
+        <item name="android:editTextColor">@color/black</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <!-- Add items from ThemeOverlay.Material3.Search  -->
+        <item name="actionMenuTextColor">?attr/colorOnSurfaceVariant</item>
+        <item name="colorControlNormal">?attr/colorOnSurfaceVariant</item>
+        <item name="actionOverflowButtonStyle">@style/Widget.Material3.Search.ActionButton.Overflow</item>
+        <item name="toolbarNavigationButtonStyle">@style/Widget.Material3.Search.Toolbar.Button.Navigation</item>
+    </style>
 </resources>

@@ -16,7 +16,7 @@
             android:name="com.teamfan.plantpedia.ui.SearchableActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".presentation.ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

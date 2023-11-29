@@ -1,4 +1,4 @@
-package com.teamfan.plantpedia.ui
+package com.teamfan.plantpedia.presentation.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
