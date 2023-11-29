@@ -1,7 +1,13 @@
 <resources>
     <string name="app_name">PlantPedia</string>
     <string name="search">Search…</string>
+    <string name="plant_detail">Plant Detail</string>
+    <string name="plant_content">About Plant</string>
     <string name="about_page">A project by Team FAN\n Firasya - Asiah - Noriza</string>
     <string name="img_txt_book">Book Thumbnail</string>
 
+    <string-array name="for_banner">
+        <item>@drawable/first_banner</item>
+        <item>@drawable/second_banner</item>
+    </string-array>
 </resources>
