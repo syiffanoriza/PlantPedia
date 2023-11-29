@@ -2,7 +2,6 @@ package com.teamfan.plantpedia
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.asiah.plantpedia.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
