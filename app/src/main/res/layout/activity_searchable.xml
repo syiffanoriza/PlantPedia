@@ -11,7 +11,7 @@
         android:id="@+id/tv_bg_search"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/dark_green1"
+        android:background="@color/cream"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 

@@ -5,6 +5,9 @@
     <string name="plants_content">About Plant</string>
     <string name="about_page">A project by Team FAN\n Firasya - Asiah - Noriza</string>
     <string name="img_txt_book">Book Thumbnail</string>
+    <string name="a_project_by">A project by</string>
+    <string name="team_fan">Team Fan</string>
+    <string name="team_name">Firasya - Asiah - Noriza</string>
 
     <string-array name="for_banner">
         <item>@drawable/first_banner</item>
