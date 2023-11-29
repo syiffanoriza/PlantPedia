@@ -14,10 +14,10 @@
         app:trackColor="@color/gray"/>
 
     <TextView
-        android:id="@+id/tv_loading_indicator"
+        android:id="@+id/tv_default_loading_indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/about_page"
+        android:text="@string/default_loading"
         android:textColor="@color/black"
         android:textSize="18sp"/>
 
