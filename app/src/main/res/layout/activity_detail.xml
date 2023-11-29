@@ -67,26 +67,29 @@
                 android:background="@color/cream"
                 app:layout_collapseMode="pin"/>
 
+
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/scroll_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+<!--    <androidx.core.widget.NestedScrollView-->
+<!--        android:id="@+id/scroll_view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">-->
 
-        <WebView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-    </androidx.core.widget.NestedScrollView>
+<!--        <WebView-->
+<!--            android:id="@+id/wv_detail_plant"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_margin="16dp"/>-->
+<!--    </androidx.core.widget.NestedScrollView>-->
 
     <include
         android:id="@+id/loading_view"
+        layout="@layout/loading_indicator"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_anchor="@id/scroll_view"
-        app:layout_anchorGravity="center"
-        layout="@layout/loading_indicator"/>
+        app:layout_anchorGravity="center" />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
