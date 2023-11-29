@@ -86,7 +86,7 @@
         android:layout_height="match_parent"
         app:layout_anchor="@id/scroll_view"
         app:layout_anchorGravity="center"
-        layout="@layout/default_loading_indicator"/>
+        layout="@layout/loading_indicator"/>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
