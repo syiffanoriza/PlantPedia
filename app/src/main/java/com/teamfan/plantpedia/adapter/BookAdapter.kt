@@ -11,11 +11,6 @@ import com.teamfan.plantpedia.network.BookItem
 class BookAdapter: RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
     private val listBooks = ArrayList<BookItem>()
     class BookViewHolder(var binding: BookItemBinding) : RecyclerView.ViewHolder(binding.root)
-    fun setData(list: List<BookItem>?) {
-        if (list == null) return
-        listBooks.clear()
-        listBooks.addAll(list)
-    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = BookViewHolder (
         BookItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)

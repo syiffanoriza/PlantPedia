@@ -82,11 +82,11 @@
 
     <include
         android:id="@+id/loading_view"
-        layout="@layout/loading_indicator"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_anchor="@id/scroll_view"
-        app:layout_anchorGravity="center"/>
+        app:layout_anchorGravity="center"
+        layout="@layout/default_loading_indicator"/>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
