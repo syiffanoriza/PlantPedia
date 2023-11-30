@@ -10,6 +10,7 @@ import com.teamfan.plantpedia.adapter.BookAdapter
 import com.teamfan.plantpedia.databinding.ActivityMainBinding
 import com.teamfan.plantpedia.network.BookItem
 import com.teamfan.plantpedia.presentation.BooksViewModel
+import com.teamfan.plantpedia.presentation.fragment.BookFragment
 
 class MainActivity : AppCompatActivity() {
     private var _binding: ActivityMainBinding? = null
@@ -21,6 +22,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val fragmentManager = supportFragmentManager
+        val bookFragment = BookFragment()
+
+        fragmentManager
+            .beginTransaction()
+            .add(R.id.fl_books, bookFragment, BookFragment::class.java.simpleName)
+            .commit()
      }
 
 }

@@ -6,16 +6,20 @@ import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import com.teamfan.plantpedia.R
 import com.teamfan.plantpedia.databinding.BookItemBinding
+import com.teamfan.plantpedia.network.BookDetail
+import com.teamfan.plantpedia.network.BookImages
 import com.teamfan.plantpedia.network.BookItem
 
 class BookAdapter: RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
-    private val listBooks = ArrayList<BookItem>()
+    private val listData = ArrayList<BookItem>()
+    private val listBooks = ArrayList<BookDetail>()
+    private val listImages = ArrayList<BookImages>()
     class BookViewHolder(var binding: BookItemBinding) : RecyclerView.ViewHolder(binding.root)
 
     fun setData(list: List<BookItem>?) {
         if (list == null) return
-        listBooks.clear()
-        listBooks.addAll(list)
+        listData.clear()
+        listData.addAll(list)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = BookViewHolder (
@@ -26,12 +30,12 @@ class BookAdapter: RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
 
     override fun onBindViewHolder(holder: BookViewHolder, position: Int) {
         val books = listBooks[position]
+        val images = listImages[position]
 
         holder.binding.apply {
             tvTitle.text = books.title
-            tvAuthor.text = books.author
             Picasso.get()
-                .load(books.thumbnail)
+                .load(images.thumbnail)
                 .resize(2048, 1600)
                 .onlyScaleDown()
                 .placeholder(R.drawable.ic_logo)

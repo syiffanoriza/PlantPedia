@@ -44,7 +44,6 @@
             android:maxLines="1"
             android:textColor="@color/green"
             android:textSize="20sp"
-            android:text="test"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/cv_image"/>
@@ -56,7 +55,6 @@
             android:maxLines="1"
             android:textColor="@color/black"
             android:textSize="12sp"
-            android:text="test"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_title"/>

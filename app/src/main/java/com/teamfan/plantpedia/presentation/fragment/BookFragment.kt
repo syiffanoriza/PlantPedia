@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.teamfan.plantpedia.R
 import com.teamfan.plantpedia.adapter.BookAdapter
 import com.teamfan.plantpedia.databinding.FragmentBookBinding
@@ -33,12 +34,15 @@ class BookFragment : Fragment() {
         booksViewModel.showBooks()
         booksViewModel.books.observe(viewLifecycleOwner) {
             val mAdapter = BookAdapter()
-            mAdapter.setData(it.books)
+            mAdapter.setData(it.items)
             Log.i(
                 "BookFragment",
-                "onViewCreated: ${it.books}"
+                "onViewCreated: ${it.items}"
             )
-            binding.
+            binding.rvBooks.apply {
+                adapter = mAdapter
+                layoutManager = LinearLayoutManager(view.context, LinearLayoutManager.HORIZONTAL, false)
+            }
         }
     }
 }

@@ -5,7 +5,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface ApiService {
-    @GET("/v1/volumes")
+    @GET("v1/volumes")
     fun getPlantBooks(
         @Query("q") q: String ="subject:plants",
         @Query("projection") projection: String = "lite"

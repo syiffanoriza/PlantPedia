@@ -7,31 +7,45 @@ import kotlinx.parcelize.Parcelize
 
 @JsonClass(generateAdapter = true)
 data class BookResponse(
-    @Json(name = "title")
-    val title: String? = null,
+    @Json(name = "totalItems")
+    val totalItems: String? = null,
 
-    @Json(name = "author")
-    val author: String? = null,
+    @Json(name = "kind")
+    val kind: String? = null,
 
-    @Json(name = "books")
-    val books: List<BookItem>? = null
+    @Json(name = "items")
+    val items: List<BookItem>? = null
 )
 
 @JsonClass(generateAdapter = true)
 @Parcelize
 data class BookItem(
-    @Json(name = "title")
-    val title: String? = null,
-
-    @Json(name = "author")
-    val author: String? = null,
-
-    @Json(name = "thumbnail")
-    val thumbnail: String? = null,
-
     @Json(name = "selfLink")
     val selfLink: String? = null,
 
-    @Json(name = "previewLink")
-    val previewLink: String? = null
+    @Json(name = "volumeInfo")
+    val volumeInfo: BookDetail? = null
+): Parcelable
+
+@JsonClass(generateAdapter = true)
+@Parcelize
+data class BookDetail(
+    @Json(name = "title")
+    val title: String? = null,
+
+    @Json(name = "publishedDate")
+    val publishedDate: String? = null,
+
+    @Json(name = "description")
+    val description: String? = null,
+
+    @Json(name = "imageLinks")
+    val imageLinks: List<BookImages>? = null
+): Parcelable
+
+@JsonClass(generateAdapter = true)
+@Parcelize
+data class BookImages(
+    @Json(name = "thumbnail")
+    val thumbnail: String? = null
 ): Parcelable

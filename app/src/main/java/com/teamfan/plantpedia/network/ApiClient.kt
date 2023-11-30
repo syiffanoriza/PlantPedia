@@ -19,7 +19,7 @@ object ApiClient {
             .build()
 
         return Retrofit.Builder()
-            .baseUrl("https://www.googleapis.com/books")
+            .baseUrl("https://www.googleapis.com/books/")
             .client(okHttpClient)
             .addConverterFactory(MoshiConverterFactory.create())
             .build()
