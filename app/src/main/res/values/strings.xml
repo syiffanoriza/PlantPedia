@@ -6,9 +6,12 @@
     <string name="default_loading">Loading</string>
     <string name="about_page">A project by Team FAN\n Firasya - Asiah - Noriza</string>
     <string name="img_txt_book">Book Thumbnail</string>
+    <string name="img_txt_main">Home Page Banner</string>
 
     <string-array name="for_banner">
         <item>@drawable/first_banner</item>
         <item>@drawable/second_banner</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

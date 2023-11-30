@@ -11,7 +11,10 @@ data class BookResponse(
     val title: String? = null,
 
     @Json(name = "author")
-    val author: String? = null
+    val author: String? = null,
+
+    @Json(name = "books")
+    val books: List<BookItem>? = null
 )
 
 @JsonClass(generateAdapter = true)
