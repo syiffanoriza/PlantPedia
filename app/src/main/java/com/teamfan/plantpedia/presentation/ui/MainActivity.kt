@@ -17,17 +17,10 @@ class MainActivity : AppCompatActivity() {
 
     private var _bookViewModel: BooksViewModel? = null
     private val bookViewModel get() = _bookViewModel as BooksViewModel
-    private val list = ArrayList<BookItem>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        initView()
      }
 
-    private fun initView() {
-        binding.rvBooks.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
-        binding.rvBooks.adapter = BookAdapter(list)
-    }
 }
