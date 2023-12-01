@@ -16,8 +16,7 @@
         <com.google.android.material.appbar.MaterialToolbar
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:background="@color/cream"
-            app:logo="@drawable/ic_back">
+            android:background="@color/cream">
 
             <TextView
                 android:layout_width="match_parent"
@@ -67,6 +66,16 @@
             android:layout_height="match_parent"
             android:textSize="11sp"
             android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/btn_read"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/read"
+            android:textColor="@color/cream"
+            android:backgroundTint="@color/green"
+            android:layout_marginStart="50dp"/>
+
     </com.google.android.material.appbar.AppBarLayout>
     <include
         android:id="@+id/loading_view"
