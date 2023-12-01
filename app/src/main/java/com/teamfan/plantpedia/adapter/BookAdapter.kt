@@ -1,13 +1,12 @@
 package com.teamfan.plantpedia.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
 import com.teamfan.plantpedia.R
 import com.teamfan.plantpedia.databinding.BookItemBinding
-import com.teamfan.plantpedia.network.BookDetail
-//import com.teamfan.plantpedia.network.BookImages
 import com.teamfan.plantpedia.network.BookItem
 
 class BookAdapter: RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
@@ -30,14 +29,19 @@ class BookAdapter: RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
         val books = listData[position]
 
         holder.binding.apply {
+            val image = books.volumeInfo?.imageLinks?.thumbnail
+            Log.d(
+                "BookAdapter",
+                "Thumbnail Image URL: $image"
+            )
             tvTitle.text = books.volumeInfo?.title
-            tvAuthor.text = books.volumeInfo?.title
-//            Picasso.get()
-//                .load(R.drawable.button_github)
-//                .resize(2048, 1600)
-//                .onlyScaleDown()
-//                .placeholder(R.drawable.ic_logo)
-//                .into(ivBook)
+            tvAuthor.text = books.volumeInfo?.authors?.first()
+            Picasso.get()
+                .load(image)
+                .resize(2048, 1600)
+                .onlyScaleDown()
+                .placeholder(R.drawable.ic_logo)
+                .into(ivBook)
         }
 
         holder.itemView.setOnClickListener {

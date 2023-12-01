@@ -7,7 +7,12 @@ import retrofit2.http.Query
 interface ApiService {
     @GET("v1/volumes")
     fun getPlantBooks(
-        @Query("q") q: String ="subject:plants",
+        @Query("q") q: String = "subject:plants",
         @Query("projection") projection: String = "lite"
+    ): Call<BookResponse>
+
+    @GET("v1/volumes")
+    fun getSearchBooks(
+        @Query("q") q: String,
     ): Call<BookResponse>
 }
