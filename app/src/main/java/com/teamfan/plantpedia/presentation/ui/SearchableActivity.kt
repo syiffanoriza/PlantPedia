@@ -32,30 +32,31 @@ class SearchableActivity : AppCompatActivity() {
         binding.loadingView.root.visibility = View.VISIBLE
         handleIntent(intent)
 
-//        searchViewModel.searchBooks.observe(this){
-//            binding.apply {
-//                if (it.title?.length == 0) {
-////                    tvNoBooks.text = getString(R.string.no_books_text)
-////                    tvNoBooks.visibility = View.VISIBLE
-//            } else {
-//                rvSearchResult.apply {
-//                    val mAdapter = BookAdapter()
-////                    mAdapter.setData(it.title)
-//                    adapter = mAdapter
-//                    layoutManager = LinearLayoutManager(this@SearchableActivity)
-//                    visibility = View.VISIBLE
-//                }
-//            }
-//            }
-//            binding.loadingView.root.visibility = View.GONE
-//        }
+        searchViewModel.searchBooks.observe(this){
+            binding.apply {
+                if (it.items?.size == 0) {
+                    tvNoBooks.text = getString(R.string.no_books_text)
+                    tvNoBooks.visibility = View.VISIBLE
+            } else {
+                rvSearchResult.apply {
+                    val mAdapter = BookAdapter()
+                    mAdapter.setData(it.items)
+                    adapter = mAdapter
+                    layoutManager = LinearLayoutManager(this@SearchableActivity)
+                    visibility = View.VISIBLE
+                }
+              }
+            }
+            binding.loadingView.root.visibility = View.GONE
+        }
+        val searchManager = getSystemService(Context.SEARCH_SERVICE) as SearchManager
+        binding.searchBookView.setSearchableInfo(searchManager.getSearchableInfo(componentName))
     }
 
     override fun onNewIntent(intent: Intent?) {
         super.onNewIntent(intent)
         setIntent(intent)
     }
-
     fun handleIntent(intent: Intent){
         if (Intent.ACTION_SEARCH == intent.action){
             intent.getStringExtra(SearchManager.QUERY)
@@ -64,7 +65,10 @@ class SearchableActivity : AppCompatActivity() {
                     binding.apply {
                         rvSearchResult.visibility = View.GONE
                         loadingView.root.visibility = View.VISIBLE
-//                        tvNoBooks.visibility = View.INVISIBLE
+                        tvNoBooks.visibility = View.INVISIBLE
+                        searchBookView.setQuery("", false)
+                        searchBookView.queryHint = query
+                        searchBookView.clearFocus()
                     }
                     doMySearch(query)
                 }
@@ -74,6 +78,7 @@ class SearchableActivity : AppCompatActivity() {
     fun doMySearch(q: String){
         searchViewModel.searchBooks()
     }
+
 
     override fun onDestroy() {
         super.onDestroy()

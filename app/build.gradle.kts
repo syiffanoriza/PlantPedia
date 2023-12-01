@@ -42,6 +42,7 @@ android {
 }
 
 dependencies {
+
     implementation("androidx.core:core-splashscreen:1.1.0-alpha02")
     implementation("androidx.coordinatorlayout:coordinatorlayout:1.2.0")
     implementation("com.squareup.picasso:picasso:2.8")
