@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.teamfan.plantpedia.R
 import com.teamfan.plantpedia.adapter.BookAdapter
 import com.teamfan.plantpedia.databinding.FragmentBookBinding
 import com.teamfan.plantpedia.presentation.BooksViewModel

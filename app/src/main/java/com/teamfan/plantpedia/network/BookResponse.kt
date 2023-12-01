@@ -14,7 +14,10 @@ data class BookResponse(
     val kind: String? = null,
 
     @Json(name = "items")
-    val items: List<BookItem>? = null
+    val items: List<BookItem>? = null,
+
+    @Json(name = "details")
+    val details: BookDetail? = null
 )
 
 @JsonClass(generateAdapter = true)
@@ -38,14 +41,4 @@ data class BookDetail(
 
     @Json(name = "description")
     val description: String? = null,
-
-    @Json(name = "imageLinks")
-    val imageLinks: List<BookImages>? = null
-): Parcelable
-
-@JsonClass(generateAdapter = true)
-@Parcelize
-data class BookImages(
-    @Json(name = "thumbnail")
-    val thumbnail: String? = null
 ): Parcelable

@@ -7,13 +7,11 @@ import com.squareup.picasso.Picasso
 import com.teamfan.plantpedia.R
 import com.teamfan.plantpedia.databinding.BookItemBinding
 import com.teamfan.plantpedia.network.BookDetail
-import com.teamfan.plantpedia.network.BookImages
+//import com.teamfan.plantpedia.network.BookImages
 import com.teamfan.plantpedia.network.BookItem
 
 class BookAdapter: RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
     private val listData = ArrayList<BookItem>()
-    private val listBooks = ArrayList<BookDetail>()
-    private val listImages = ArrayList<BookImages>()
     class BookViewHolder(var binding: BookItemBinding) : RecyclerView.ViewHolder(binding.root)
 
     fun setData(list: List<BookItem>?) {
@@ -26,20 +24,20 @@ class BookAdapter: RecyclerView.Adapter<BookAdapter.BookViewHolder>() {
         BookItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
     )
 
-    override fun getItemCount(): Int = listBooks.size
+    override fun getItemCount(): Int = listData.size
 
     override fun onBindViewHolder(holder: BookViewHolder, position: Int) {
-        val books = listBooks[position]
-        val images = listImages[position]
+        val books = listData[position]
 
         holder.binding.apply {
-            tvTitle.text = books.title
-            Picasso.get()
-                .load(images.thumbnail)
-                .resize(2048, 1600)
-                .onlyScaleDown()
-                .placeholder(R.drawable.ic_logo)
-                .into(ivBook)
+            tvTitle.text = books.volumeInfo?.title
+            tvAuthor.text = books.volumeInfo?.title
+//            Picasso.get()
+//                .load(R.drawable.button_github)
+//                .resize(2048, 1600)
+//                .onlyScaleDown()
+//                .placeholder(R.drawable.ic_logo)
+//                .into(ivBook)
         }
 
         holder.itemView.setOnClickListener {
