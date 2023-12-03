@@ -76,7 +76,7 @@ class SearchableActivity : AppCompatActivity() {
     }
 
     fun doMySearch(q: String){
-        searchViewModel.searchBooks(q)
+        searchViewModel.searchBooks()
     }
 
 

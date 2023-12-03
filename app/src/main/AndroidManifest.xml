@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -15,12 +15,15 @@
         android:theme="@style/Theme.PlantPedia"
         tools:targetApi="31">
         <activity
-            android:name="com.teamfan.plantpedia.ui.SearchableActivity"
+            android:name=".presentation.ui.AboutPageActivity"
             android:exported="false" />
-
+        <activity
+            android:name=".SearchableActivity"
+            android:exported="false" />
         <activity
             android:name=".presentation.ui.MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Base.Theme.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
