@@ -18,7 +18,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/white"
+            android:background="@color/cream"
             app:layout_scrollFlags="scroll|enterAlways"
             app:logo="@drawable/logo_pp"
             app:popupTheme="@android:style/ThemeOverlay.Material.Light"

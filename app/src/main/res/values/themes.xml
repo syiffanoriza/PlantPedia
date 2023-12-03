@@ -3,7 +3,7 @@
     <style name="Base.Theme.PlantPedia" parent="Theme.Material3.DayNight">
         <!-- Customize your light theme here. -->
         <item name="android:statusBarColor">@color/cream</item>
-        <item name="android:colorControlNormal">@color/white</item>
+        <item name="android:colorControlNormal">@color/dark_green</item>
         <item name="android:windowLightStatusBar">true</item>
     </style>
 
@@ -13,12 +13,12 @@
     </style>
 
     <style name="ThemeOverlay.SearchView" parent="">
-        <item name="android:editTextColor">@color/black</item>
-        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:editTextColor">@color/dark_green</item>
+        <item name="android:textColorHint">@color/translucent_green</item>
 
         <!-- Add items from ThemeOverlay.Material3.Search  -->
-        <item name="actionMenuTextColor">?attr/colorOnSurfaceVariant</item>
-        <item name="colorControlNormal">?attr/colorOnSurfaceVariant</item>
+        <item name="android:actionMenuTextColor">@color/dark_green</item>
+        <item name="android:colorControlNormal">@color/dark_green</item>
         <item name="actionOverflowButtonStyle">@style/Widget.Material3.Search.ActionButton.Overflow</item>
         <item name="toolbarNavigationButtonStyle">@style/Widget.Material3.Search.Toolbar.Button.Navigation</item>
     </style>

@@ -14,6 +14,11 @@ class AboutPageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         _binding = ActivityAboutPageBinding.inflate(layoutInflater)
+        setSupportActionBar(binding.toolbarAbout)
+        supportActionBar?.apply {
+            setDisplayHomeAsUpEnabled(true)
+            title = "About the App"
+        }
         setContentView(binding.root)
 
         binding.btnGithub.setOnClickListener {
@@ -23,5 +28,9 @@ class AboutPageActivity : AppCompatActivity() {
         }
     }
 
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressedDispatcher.onBackPressed()
+        return super.onSupportNavigateUp()
+    }
 
 }
