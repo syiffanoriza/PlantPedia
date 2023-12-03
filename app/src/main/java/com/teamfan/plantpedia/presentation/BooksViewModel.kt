@@ -45,9 +45,9 @@ class BooksViewModel: ViewModel() {
             })
     }
 
-    fun searchBooks() {
+    fun searchBooks(q: String) {
         ApiClient.provideApiService().getSearchBooks(q)
-            .enqueue(object :Callback<BookResponse>{
+            .enqueue(object: Callback<BookResponse>{
                 override fun onResponse(
                     call: Call<BookResponse>,
                     response: Response<BookResponse>
