@@ -4,48 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.ui.SearchableActivity"
-    android:background="@color/white">
-
-    <TextView
-        android:id="@+id/tv_bg_search"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:background="@color/cream"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <ImageView
-        android:id="@+id/iv_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/logo_pp"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="20dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+    tools:context=".presentation.ui.SearchableActivity">
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/search_book_view"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="@color/white"
-        android:layout_marginStart="100dp"
-        android:layout_marginBottom="630dp"
-        android:layout_marginEnd="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/cream"
+        app:iconifiedByDefault="false"
+        app:layout_constraintTop_toTopOf="parent"/>
 
-    </androidx.appcompat.widget.SearchView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_search_result"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_book_view" />
+        app:layout_constraintTop_toBottomOf="@id/search_book_view"
+        tools:listitem="@layout/book_item_alt"/>
 
     <include
         android:id="@+id/loading_view"
@@ -64,7 +41,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

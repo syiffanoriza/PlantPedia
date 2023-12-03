@@ -9,7 +9,7 @@ import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.teamfan.plantpedia.R
-import com.teamfan.plantpedia.adapter.BookAdapter
+import com.teamfan.plantpedia.adapter.SearchAdapter
 import com.teamfan.plantpedia.databinding.ActivitySearchableBinding
 import com.teamfan.plantpedia.presentation.BooksViewModel
 
@@ -39,7 +39,7 @@ class SearchableActivity : AppCompatActivity() {
                     tvNoBooks.visibility = View.VISIBLE
             } else {
                 rvSearchResult.apply {
-                    val mAdapter = BookAdapter()
+                    val mAdapter = SearchAdapter()
                     mAdapter.setData(it.items)
                     adapter = mAdapter
                     layoutManager = LinearLayoutManager(this@SearchableActivity)
