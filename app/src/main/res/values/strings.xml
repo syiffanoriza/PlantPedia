@@ -15,4 +15,5 @@
     <string name="info_app">info app</string>
     <string name="txt_for_you">Books For You</string>
     <string name="img_txt_banner">Homepage Banner</string>
+    <string name="btn_txt_github">View On Github</string>
 </resources>
