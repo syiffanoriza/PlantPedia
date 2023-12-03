@@ -15,12 +15,6 @@
         android:theme="@style/Theme.PlantPedia"
         tools:targetApi="31">
         <activity
-            android:name=".presentation.ui.AboutPageActivity"
-            android:exported="false" />
-        <activity
-            android:name=".presentation.ui.SearchableActivity"
-            android:exported="false" />
-        <activity
             android:name=".presentation.ui.MainActivity"
             android:exported="true"
             android:theme="@style/Base.Theme.SplashScreen.">
@@ -32,6 +26,12 @@
                 android:name="android.app.default_searchable"
                 android:value=".presentation.ui.SearchableActivity"/>
         </activity>
+        <activity
+            android:name=".presentation.ui.AboutPageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".presentation.ui.SearchableActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

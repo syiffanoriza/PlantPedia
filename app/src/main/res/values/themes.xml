@@ -3,7 +3,7 @@
     <style name="Base.Theme.PlantPedia" parent="Theme.Material3.DayNight">
         <!-- Customize your light theme here. -->
         <item name="android:statusBarColor">@color/cream</item>
-        <item name="colorControlNormal">@color/white</item>
+        <item name="android:colorControlNormal">@color/white</item>
         <item name="android:windowLightStatusBar">true</item>
     </style>
 
