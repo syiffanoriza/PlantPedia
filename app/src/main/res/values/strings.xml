@@ -3,6 +3,7 @@
     <string name="search">Search…</string>
     <string name="plant_detail">Plant Detail</string>
     <string name="plants_content">About Plant</string>
+    <string name="goToGithub">github</string>
     <string name="about_page">A project by Team FAN\n Firasya - Asiah - Noriza</string>
     <string name="img_txt_book">Book Thumbnail</string>
     <string name="no_books_text">No Books about it.</string>
@@ -11,10 +12,5 @@
     <string name="team_name">Firasya - Asiah - Noriza</string>
     <string name="getting_books">Getting Books..</string>
     <string name="read">e-book</string>
-
-
-    <string-array name="for_banner">
-        <item>@drawable/first_banner</item>
-        <item>@drawable/second_banner</item>
-    </string-array>
+    <string name="info_app">info app</string>
 </resources>
