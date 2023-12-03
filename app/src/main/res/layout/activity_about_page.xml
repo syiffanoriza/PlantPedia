@@ -81,5 +81,4 @@
         app:layout_constraintTop_toTopOf="@id/tv_context2"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
-
 </androidx.constraintlayout.widget.ConstraintLayout>
