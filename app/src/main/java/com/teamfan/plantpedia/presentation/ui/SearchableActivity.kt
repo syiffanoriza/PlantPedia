@@ -1,4 +1,4 @@
-package com.teamfan.plantpedia
+package com.teamfan.plantpedia.presentation.ui
 
 import android.app.SearchManager
 import android.content.Context
@@ -6,9 +6,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Adapter
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.teamfan.plantpedia.R
 import com.teamfan.plantpedia.adapter.BookAdapter
 import com.teamfan.plantpedia.databinding.ActivitySearchableBinding
 import com.teamfan.plantpedia.presentation.BooksViewModel
@@ -76,7 +76,7 @@ class SearchableActivity : AppCompatActivity() {
     }
 
     fun doMySearch(q: String){
-        searchViewModel.searchBooks()
+        searchViewModel.searchBooks(q)
     }
 
 

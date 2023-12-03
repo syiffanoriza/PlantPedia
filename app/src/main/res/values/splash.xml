@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Base.Theme.SplashScreen" parent="Theme.SplashScreen">
+    <style name="Base.Theme.SplashScreen." parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/cream</item>
         <item name="windowSplashScreenAnimatedIcon">@drawable/logo_pp1</item>
         <item name="postSplashScreenTheme">@style/Theme.PlantPedia</item>

@@ -15,10 +15,4 @@ interface ApiService {
     fun getSearchBooks(
         @Query("q") q: String,
     ): Call<BookResponse>
-
-    @GET("v1/volumes")
-    fun getSearchBooks(
-        @Query("q") q: String,
-        @Query("bookSize") bookSize: Int = 20,
-    ): Call<BookResponse>
 }

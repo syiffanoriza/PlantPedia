@@ -45,32 +45,32 @@ class BooksViewModel: ViewModel() {
             })
     }
 
-    fun searchBooks() {
-//        ApiClient.provideApiService().getSearchBooks(q)
-//            .enqueue(object :Callback<BookResponse>{
-//                override fun onResponse(
-//                    call: Call<BookResponse>,
-//                    response: Response<BookResponse>
-//                ) {
-//                    if (response.isSuccessful){
-//                        Log.i(
-//                            "ViewModel",
-//                            "onResponse: Call error with HTTP status code" + response.code()
-//                        )
-//                        _searchBooks.postValue(response.body())
-//                   } else Log.e(
-//                       "ViewModel",
-//                       "onFailure: " + response.code()
-//                   )
-//            }
-//
-//                override fun onFailure(call: Call<BookResponse>, t: Throwable) {
-//                    Log.e(
-//                        "ViewModel",
-//                        "onFailure: " + t.localizedMessage
-//                    )
-//                }
-//
-//            })
+    fun searchBooks(q: String) {
+        ApiClient.provideApiService().getSearchBooks(q)
+            .enqueue(object :Callback<BookResponse>{
+                override fun onResponse(
+                    call: Call<BookResponse>,
+                    response: Response<BookResponse>
+                ) {
+                    if (response.isSuccessful){
+                        Log.i(
+                            "ViewModel",
+                            "onResponse: Call error with HTTP status code" + response.code()
+                        )
+                        _searchBooks.postValue(response.body())
+                   } else Log.e(
+                       "ViewModel",
+                       "onFailure: " + response.code()
+                   )
+            }
+
+                override fun onFailure(call: Call<BookResponse>, t: Throwable) {
+                    Log.e(
+                        "ViewModel",
+                        "onFailure: " + t.localizedMessage
+                    )
+                }
+
+            })
     }
 }
