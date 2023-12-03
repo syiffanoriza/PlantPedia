@@ -1,5 +1,6 @@
 package com.teamfan.plantpedia.adapter
 
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -9,6 +10,7 @@ import com.teamfan.plantpedia.R
 import com.teamfan.plantpedia.databinding.BookItemAltBinding
 import com.teamfan.plantpedia.databinding.BookItemBinding
 import com.teamfan.plantpedia.network.BookItem
+import com.teamfan.plantpedia.presentation.ui.DetailActivity
 
 class SearchAdapter: RecyclerView.Adapter<SearchAdapter.BookViewHolder>() {
     private val listData = ArrayList<BookItem>()
@@ -47,7 +49,9 @@ class SearchAdapter: RecyclerView.Adapter<SearchAdapter.BookViewHolder>() {
         }
 
         holder.itemView.setOnClickListener {
-            TODO("implement soon")
+            val intent = Intent(it.context, DetailActivity::class.java)
+            intent.putExtra(DetailActivity.BOOK_DATA, books)
+            it.context.startActivity(intent)
         }
     }
 }

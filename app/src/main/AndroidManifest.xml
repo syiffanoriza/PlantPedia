@@ -30,6 +30,9 @@
             android:name=".presentation.ui.AboutPageActivity"
             android:exported="false" />
         <activity
+            android:name=".presentation.ui.DetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".presentation.ui.SearchableActivity"
             android:exported="false"
             android:launchMode="singleTop"

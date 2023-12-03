@@ -43,7 +43,10 @@ data class BookDetail(
     val description: String? = null,
 
     @Json(name = "imageLinks")
-    val imageLinks: ImageLinks? = null
+    val imageLinks: ImageLinks? = null,
+
+    @Json(name = "previewLink")
+    val previewLink: String? = null
 ): Parcelable
 
 @JsonClass(generateAdapter = true)
