@@ -13,4 +13,6 @@
     <string name="getting_books">Getting Books..</string>
     <string name="read">e-book</string>
     <string name="info_app">info app</string>
+    <string name="txt_for_you">Books For You</string>
+    <string name="img_txt_banner">Homepage Banner</string>
 </resources>
