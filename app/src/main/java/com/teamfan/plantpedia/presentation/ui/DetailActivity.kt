@@ -2,9 +2,11 @@ package com.teamfan.plantpedia.presentation.ui
 
 import android.content.Intent
 import android.net.Uri
+import android.opengl.Visibility
 import android.os.Build.VERSION.SDK_INT
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import com.squareup.picasso.Picasso
 import com.teamfan.plantpedia.R
 import com.teamfan.plantpedia.databinding.ActivityDetailBinding
@@ -35,6 +37,7 @@ class DetailActivity : AppCompatActivity() {
             tvAuthorBook.text = bookData?.volumeInfo?.authors?.first()
             tvDescription.text = bookData?.volumeInfo?.description
             tvPublishAt.text = bookData?.volumeInfo?.publishedDate
+            binding.loadingView.root.visibility = View.GONE
         }
 
         binding.btnRead.setOnClickListener {
