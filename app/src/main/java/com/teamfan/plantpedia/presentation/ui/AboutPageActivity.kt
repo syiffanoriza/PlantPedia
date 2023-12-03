@@ -6,19 +6,20 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.teamfan.plantpedia.R
+import com.teamfan.plantpedia.databinding.ActivityAboutPageBinding
 
 class AboutPageActivity : AppCompatActivity() {
+    private var _binding: ActivityAboutPageBinding? = null
+    private val binding get() = _binding as ActivityAboutPageBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_about_page)
+        _binding = ActivityAboutPageBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val btnOpenUrl: Button = findViewById(R.id.btn_github)
-
-        btnOpenUrl.setOnClickListener {
-            val openUrl = Intent(android.content.Intent.ACTION_VIEW)
-            openUrl.data = Uri.parse("https://github.com/syiffanoriza/PlantPedia")
-
-            startActivity(openUrl)
+        binding.btnGithub.setOnClickListener {
+            startActivity(Intent(Intent.ACTION_VIEW).apply {
+                data = Uri.parse("https://github.com/syiffanoriza/PlantPedia")
+            })
         }
     }
 
