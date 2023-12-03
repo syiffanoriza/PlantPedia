@@ -6,6 +6,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.teamfan.plantpedia.R
@@ -38,6 +39,7 @@ class SearchableActivity : AppCompatActivity() {
                     tvNoBooks.text = getString(R.string.no_books_text)
                     tvNoBooks.visibility = View.VISIBLE
             } else {
+                Toast.makeText(this@SearchableActivity, "Search Successful!", Toast.LENGTH_SHORT).show()
                 rvSearchResult.apply {
                     val mAdapter = SearchAdapter()
                     mAdapter.setData(it.items)

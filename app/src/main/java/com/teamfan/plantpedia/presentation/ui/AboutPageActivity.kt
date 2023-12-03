@@ -5,6 +5,7 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import com.teamfan.plantpedia.R
 import com.teamfan.plantpedia.databinding.ActivityAboutPageBinding
 
@@ -20,6 +21,8 @@ class AboutPageActivity : AppCompatActivity() {
             title = "About the App"
         }
         setContentView(binding.root)
+
+        Toast.makeText(this, "Check us out on Github!", Toast.LENGTH_SHORT).show()
 
         binding.btnGithub.setOnClickListener {
             startActivity(Intent(Intent.ACTION_VIEW).apply {

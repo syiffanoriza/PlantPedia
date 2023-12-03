@@ -37,6 +37,7 @@ class SearchAdapter: RecyclerView.Adapter<SearchAdapter.BookViewHolder>() {
             )
             tvTitle.text = books.volumeInfo?.title
             tvAuthor.text = books.volumeInfo?.authors?.first()
+            tvDescription.text = books.volumeInfo?.description
             Picasso.get()
                 .load(image)
                 .resize(2048, 1600)
