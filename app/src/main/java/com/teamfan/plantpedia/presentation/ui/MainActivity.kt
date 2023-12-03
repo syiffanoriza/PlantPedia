@@ -33,7 +33,4 @@ class MainActivity : AppCompatActivity() {
             .add(R.id.fl_books, bookFragment, BookFragment::class.java.simpleName)
             .commit()
      }
-
-
-
 }
