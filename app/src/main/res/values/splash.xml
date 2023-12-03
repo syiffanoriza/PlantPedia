@@ -2,7 +2,7 @@
 <resources>
     <style name="Base.Theme.SplashScreen." parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/cream</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/logo_pp1</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_logo_splashscreen</item>
         <item name="postSplashScreenTheme">@style/Theme.PlantPedia</item>
     </style>
 </resources>
