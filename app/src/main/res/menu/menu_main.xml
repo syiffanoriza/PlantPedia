@@ -5,15 +5,14 @@
         android:id="@+id/option_search"
         android:icon="@drawable/ic_search"
         android:title="@string/search"
-        app:actionViewClass="android.widget.SearchView"
-        app:showAsAction="ifRoom"/>
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView"/>
 
 
     <item
         android:id="@+id/option_info"
         android:icon="@drawable/ic_info"
         android:title="@string/info_app"
-        app:showAsAction="ifRoom|collapseActionView"
-        app:actionViewClass="androidx.constraintlayout.widget.ConstraintLayout" />
+        app:showAsAction="ifRoom"/>
 
 </menu>
