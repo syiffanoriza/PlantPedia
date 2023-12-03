@@ -15,7 +15,7 @@ object ApiClient {
                 it.proceed(newRequest)
             }
             .readTimeout(10, TimeUnit.SECONDS)
-            .retryOnConnectionFailure(false)
+            .retryOnConnectionFailure(true)
             .build()
 
         return Retrofit.Builder()
