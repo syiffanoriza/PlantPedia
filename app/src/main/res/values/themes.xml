@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.PlantPedia" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.PlantPedia" parent="Theme.Material3.DayNight">
         <!-- Customize your light theme here. -->
         <item name="android:statusBarColor">@color/cream</item>
         <item name="colorControlNormal">@color/white</item>
@@ -25,6 +25,5 @@
 
     <style name="SplashScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="windowSplashScreenBackground">@color/white</item>
-
     </style>
 </resources>
