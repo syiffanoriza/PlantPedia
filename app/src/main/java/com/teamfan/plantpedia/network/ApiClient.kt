@@ -10,7 +10,8 @@ object ApiClient {
         val okHttpClient = OkHttpClient.Builder()
             .addInterceptor {
                 val newRequest = it.request().newBuilder()
-                    .addHeader("X-API-KEY", "AIzaSyBZngW5OxHDLfL2jYE6qYquYnpnR6SQ38g")
+                    .addHeader("X-API-KEY", "")
+                    TODO("Insert your API Key")
                     .build()
                 it.proceed(newRequest)
             }
